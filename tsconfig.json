@@ -1,7 +1,71 @@
 {
-  "files": [],
-  "references": [
-    { "path": "./tsconfig.app.json" },
-    { "path": "./tsconfig.node.json" }
+  "compilerOptions": {
+    "target": "es5",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react",
+    "experimentalDecorators": true,
+    "sourceMap": true,
+    "baseUrl": ".",
+    "paths": {
+      "@components/*": [
+        "src/components/*"
+      ],
+      "@helpers/*": [
+        "src/helpers/*"
+      ],
+      "@utils/*": [
+        "src/utils/*"
+      ],
+      "@pages/*": [
+        "src/pages/*"
+      ],
+      "@routes/*": [
+        "src/routes/*"
+      ],
+      "@contexts/*": [
+        "src/contexts/*"
+      ],
+      "@interfaces/*": [
+        "src/interfaces/*"
+      ],
+      "@store/*": [
+        "src/store/*"
+      ],
+      "@assets/*": [
+        "src/assets/*"
+      ],
+      "@hooks/*": [
+        "src/hooks/*"
+      ],
+      "@service/*": [
+        "src/service/*"
+      ],
+      "@styles/*": [
+        "src/styles/*"
+      ],
+      "@containers/*": [
+        "src/containers/*"
+      ]
+    }
+  },
+  "include": [
+    "src",
+    "tests",
+    "react-app-env.d.ts"
   ]
 }
