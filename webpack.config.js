@@ -15,7 +15,7 @@ module.exports = {
   output: {
     path: path.join(__dirname, '/sam'),
     filename: 'bundle.js',
-    publicPath: '/'
+    publicPath: process.env.NODE_ENV === 'production' ? '/sam/':'/'
   },
   resolve: {
     extensions: [".ts", ".tsx", ".js"],
