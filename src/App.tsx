@@ -1,16 +1,11 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
 import './App.css'
 import React from 'react'
+import { RouterProvider } from 'react-router-dom'
+import RenderRoute from './route/RenderRoute'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <img src={reactLogo}></img>
-      <p>Welcome Bitches</p>
-    </>
+    <RouterProvider router={RenderRoute} />
   )
 }
 

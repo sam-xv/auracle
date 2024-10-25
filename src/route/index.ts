@@ -1,16 +1,14 @@
-import RouteProps from "./RouteProps";
+// import RouteProps from "./RouteProps";
 
-const routes: RouteProps[] = [
-    {
-        path: '/login/sign-in',
-        component: '',
-        title: 'Sign-In'
-    },
-    {
-        path: '/login/sign-up',
-        component: '',
-        title: 'Sign-Up'
-    }
-]
+// const routes: RouteProps[] = [
+//     {
+//         path: '/login/sign-in',
+//         component: '',
+//         title: 'Sign-In'
+//     },
+    
+    
 
-export default routes;
+// ]
+
+// export default routes;
