@@ -1,7 +1,7 @@
 
 export default interface RouteProps {
-    key?: number;
     path: string;
-    component: any;
+    element: JSX.Element;
     title: string;
+    errorElement: JSX.Element
 }
