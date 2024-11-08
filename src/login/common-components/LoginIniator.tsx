@@ -4,8 +4,12 @@ import { StyledImageContainer } from './LoginStyledImageContainer'
 import { LoginGlassContainer } from './LoginGlassContainer'
 import { SignIn } from '../components/sign-in/SignIn'
 import { SignUp } from '../components/sign-up/SignUp'
+import { useLocation } from 'react-router'
 
-export default function LoginInitiator(props: { isSignUp: boolean }) {
+export default function LoginInitiator() {
+  const location = useLocation();
+  const isSignUp = location.pathname.includes('sign-up')
+
   return (
     <StyledImageContainer
       container
@@ -14,7 +18,7 @@ export default function LoginInitiator(props: { isSignUp: boolean }) {
       justifyContent='center'
     >
       <LoginGlassContainer className='height-100-per width-100-per'>
-        {props.isSignUp ? <SignUp /> : <SignIn />}
+        {isSignUp ? <SignUp /> : <SignIn />}
       </LoginGlassContainer>
     </StyledImageContainer>
   )
