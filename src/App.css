@@ -1,3 +1,11 @@
+@font-face {
+  font-family: 'ADLaM Display';
+  font-style: normal;
+  font-weight: 200 700;
+  font-display: swap;
+  src: url('https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap') format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
 #root {
   background-color: black;
     height: 100dvh;
@@ -51,3 +59,10 @@
 .background-size-cover {
   background-size: cover;
 }
+.underline-on-hover:hover {
+  text-decoration: underline;
+}
+
+/* input:-internal-autofill-selected {
+
+} */
