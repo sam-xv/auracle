@@ -11,8 +11,9 @@ Object.keys(tsPaths).forEach((tsPath) => {
 })
 
 module.exports = {
+  mode: "development",
   devtool: 'source-map',
-  entry: ['babel-polyfill', './src/Main.tsx'],
+  entry: ['babel-polyfill','./src/Main.tsx'],
   output: {
     path: path.join(__dirname, '/sam'),
     filename: 'bundle.js',
@@ -26,7 +27,12 @@ module.exports = {
   devServer: {
     allowedHosts: 'all',
     historyApiFallback: true,
-    port: 6969
+    port: 6969,
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, PATCH, OPTIONS',
+      'Access-Control-Allow-Headers': 'X-Requested-With, content-type, Authorization',
+  },
   },
   module: {
     rules: [{

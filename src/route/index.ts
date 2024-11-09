@@ -13,7 +13,12 @@ const routes: RouteProps[] = [
         path: '/sign-up',
         title: 'Auracle',
         element: LoginInitiator
-    }
+    },
+    {
+      path: '/sign-in',
+      title: 'Auracle',
+      element: LoginInitiator
+  }
 ]
 
 export default routes;
