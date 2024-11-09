@@ -5,8 +5,11 @@ import { LoginGlassContainer } from './LoginGlassContainer'
 import { SignIn } from '../components/sign-in/SignIn'
 import { SignUp } from '../components/sign-up/SignUp'
 import { passwordData } from '../assests/vault'
+import { useLocation } from 'react-router'
 
-export default function LoginInitiator(props: { isSignUp: boolean }) {
+export default function LoginInitiator() {
+  const location = useLocation();
+  const isSignIn = location.pathname.includes('sign-in')
 
   useEffect(() => {
     localStorage.setItem('passwordData', JSON.stringify(passwordData))
@@ -20,7 +23,7 @@ export default function LoginInitiator(props: { isSignUp: boolean }) {
       justifyContent='center'
     >
       <LoginGlassContainer className='height-100-per width-100-per'>
-        {props.isSignUp ? <SignUp /> : <SignIn />}
+        {isSignIn ? <SignIn /> : <SignUp />}
       </LoginGlassContainer>
     </StyledImageContainer>
   )

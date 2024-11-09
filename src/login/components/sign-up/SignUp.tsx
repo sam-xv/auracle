@@ -1,6 +1,6 @@
-import { Button, Grid2, TextField, Typography } from "@mui/material"
-import React, { useState } from "react"
-import { boxSizing, padding, styled } from '@mui/system';
+import { Button, Grid2, Typography } from "@mui/material"
+import React from "react"
+import { styled } from '@mui/system';
 import loginWays from '../.././assests/login-ways.svg'
 import { useNavigate } from "react-router";
 import SignUpTextFieldContainer from "./SignUpTextFieldContainer";
@@ -10,7 +10,7 @@ export const SignUp = () => {
     const navigate = useNavigate();
 
     const redirectLoginPage = () => {
-        navigate("/login/sign-in");
+        navigate("/sign-in");
     }
 
     return (
@@ -43,10 +43,4 @@ export const StyledLoginButton = styled(Button)({
     borderRadius: '8px',
     color: '#FFFFFF',
     textTransform: "none"
-    // '& input': {
-    //     boxSizing: 'border-box',
-    //     height: '32px',
-    //     padding: '0px 16px',
-    //     fontSize: '12px'
-    // }
 });
